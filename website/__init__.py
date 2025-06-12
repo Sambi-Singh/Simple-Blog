@@ -7,4 +7,9 @@ def create_app():
     app = Flask(__name__) # Reference name of module
     app.config['SECRET_KEY'] = "helloworld"
 
+    #Flask route
+    @app.route("/")
+    def home():
+        return "<h1>Hello</h1>"
+
     return app
